@@ -5,7 +5,9 @@ choco install neovim
 $USER = $env:USERNAME
 
 ren C:\Users\$USER\AppData\Local\nvim nvim-backup
-git clone https://github.com/NvChad/NvChad C:\Users\$USER\AppData\Local\nvim --depth 1 && nvim
+git clone https://github.com/NvChad/NvChad C:\Users\$USER\AppData\Local\nvim --depth 1
+
+nvim
 
 ren C:\Users\$USER\AppData\Local\nvim\lua\custom custom-backup
 git clone https://github.com/Alwaa/nvchad-custom.git C:\Users\$USER\AppData\Local\nvim\lua\custom
