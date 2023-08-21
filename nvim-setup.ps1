@@ -9,10 +9,11 @@ nvim
 ren C:\Users\$USER\AppData\Local\nvim\lua\custom custom-backup
 git clone https://github.com/Alwaa/nvchad-custom.git C:\Users\$USER\AppData\Local\nvim\lua\custom
 
-# choco install nerdfont-hack
-choco install font-nerd-dejavusansmono
+# Does not work properly # choco install nerdfont-hack
 
-Write-Output "NB! Setup NerdFont"
+Write-Output "NB! Setup NerdFont Manually"
+Write-Output "NB! Setup NerdFont Manually"
+Write-Output "NB! Setup NerdFont Manually"
 
 # Delete:
 # C:\Users\$USER\AppData\Local\Microsoft\WindowsApps
