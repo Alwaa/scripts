@@ -8,10 +8,23 @@ sudo dnf install grub-customizer
 # General
 sudo dnf install htop gh neovim 
 
-git config --global user.name "Alwaa"
-git config --global user.email "74717334+Alwaa@users.noreply.github.com"
+# Setup git
+while true; do
+read -p "Setup GitHub Auth? (yes/no)" yn
 
-gh auth login
+case $yn in 
+	yes ) echo ok, we will proceed
+    git config --global user.name "Alwaa"
+    git config --global user.email "74717334+Alwaa@users.noreply.github.com"
+
+    gh auth login
+	no ) echo skipping
+    break;;
+	* ) echo invalid response;;
+esac
+
+done
+
 
 # Setup neovim
 while true; do
