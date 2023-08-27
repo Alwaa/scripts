@@ -7,7 +7,7 @@ sudo dnf upgrade
 sudo dnf install grub-customizer
 
 # General
-sudo dnf install htop gh neovim 
+sudo dnf install htop gh neovim neofetch
 
 # Rust and Python
 printf "\n --Installing Programming Languages-- \n\n"; sleep 3
