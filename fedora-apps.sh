@@ -84,7 +84,17 @@ mkdir -p ~/ugit
 mkdir -p ~/wgit
 
 # Setting up bash aliasse
-# TODO
+
+aliasesArr=(
+'alias gobs="cd ~/Documents/obsidian && ls"'
+'alias obsgit="git pull && git status && git add . && git commit -m \"Update\""'
+)
+
+FILE=~/.bashrc
+for LINE in "${aliasesArr[@]}"
+do
+  grep -qF -- "$LINE" "$FILE" || echo "$LINE" >> "$FILE"
+done
 
 # Apps
 printf "\n --Installing Apps-- \n\n"
