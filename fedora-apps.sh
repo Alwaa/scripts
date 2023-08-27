@@ -24,7 +24,8 @@ case $yn in
 	yes ) echo ok, we will proceed;
     git config --global user.name "Alwaa"
     git config --global user.email "74717334+Alwaa@users.noreply.github.com"
-    gh auth login;;
+    gh auth login
+    break;;
 	no ) echo skipping;
     break;;
 	* ) echo invalid response;;
@@ -42,7 +43,8 @@ case $yn in
 	yes ) echo ok, we will proceed;
     mkdir -p ~/.local/share/fonts/HackMono
     unzip ~/Downloads/Hack.zip -d ~/.local/share/fonts/HackMono/
-    fc-cache -v;;
+    fc-cache -v
+    break;;
 	no ) echo skipping;
     break;;
 	* ) echo invalid response;;
@@ -70,7 +72,8 @@ case $yn in
     
     printf "\n --In Nvim, run 'MasonInstallAll' and 'NvChadUpdate'\n"
     sleep 8
-    nvim;;
+    nvim
+    break;;
 	no ) echo continuing...;
     break;;
 	* ) echo invalid response;;
@@ -82,6 +85,7 @@ done
 printf "\n --Seting up folders--\n\n"
 mkdir -p ~/ugit
 mkdir -p ~/wgit
+mkdir -p ~/zwin
 
 # Setting up bash aliasse
 printf "\n --Setting up Aliases-- \n\n"
@@ -89,19 +93,24 @@ printf "\n --Setting up Aliases-- \n\n"
 aliasesArr=(
 'alias gobs="cd ~/Documents/obsidian && ls"'
 'alias obsgit="git pull && git status && git add . && git commit -m \"Update\" && git push"'
+'alias gits="git status"'
+'alias gitac="git add . && git commit -m "'
+'alias gitc="git commit -m"'
 )
 
 FILE=~/.bashrc
 for LINE in "${aliasesArr[@]}"
 do
   grep -qF -- "$LINE" "$FILE" || echo "$LINE" >> "$FILE"
+  printf "$LINE"
+  printf "\n"
 done
 
 source ~/.bashrc
-alias -p
+#alias -p
 sleep 10
 
-# Apps
+## Apps ##
 printf "\n --Installing Apps-- \n\n"
 sleep 10
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
@@ -109,6 +118,12 @@ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.f
 sudo dnf install fedora-workstation-repositories
 sudo dnf config-manager --set-enabled google-chrome
 sudo dnf install google-chrome-stable
+
+#Windows compatibility layer
+# FOR FEDORA 38
+sudo dnf config-manager --add-repo https://dl.winehq.org/wine-builds/fedora/38/winehq.repo
+sudo sudo dnf install winehq-stable
+
 
 flatpak install flathub org.gnome.Reversi # Why not
 flatpak install flathub org.kde.krita
@@ -124,9 +139,11 @@ sleep 10
 flatpak install flathub md.obsidian.Obsidian
 mkdir -p ~/Documents/obsidian/
 
-printf "\n --Setup Minimal Theme \n Fetch git repositories in '~/Documents/obsidian/'\n\n"
+printf "\n --Setup Minimal Theme \n Fetch git repositories in '~/Documents/obsidian/ (alias gobs)'\n\n"
 sleep 5
 
-printf "\n --If needed, Install Nvidia drivers through: \n https://rpmfusion.org/Howto/NVIDIA\n"
+printf "\n --If needed, Install Nvidia drivers through: \n https://rpmfusion.org/Howto/NVIDIA\n\n"
 
 sleep 10
+neofetch
+sleep 2
