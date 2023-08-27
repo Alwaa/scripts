@@ -80,8 +80,8 @@ done
 
 # Basic folder structure
 printf "\n --Seting up folders--\n\n"
-mkdir -p "~/ugit"
-mkdir -p "~/wgit"
+mkdir -p ~/ugit
+mkdir -p ~/wgit
 
 # Setting up bash aliasse
 # TODO
