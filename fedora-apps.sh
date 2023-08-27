@@ -8,6 +8,9 @@ sudo dnf install grub-customizer
 
 # General
 sudo dnf install htop gh neovim neofetch
+#rpmfusion
+sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+sudo dnf groupupdate coresudo dnf groupupdate core
 
 # Rust and Python
 printf "\n --Installing Programming Languages-- \n\n"; sleep 3
