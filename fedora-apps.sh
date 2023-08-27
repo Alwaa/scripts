@@ -60,13 +60,16 @@ case $yn in
 
     git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
 
-    printf "Remember to not choose a custom config\n -Then exit"
+    printf "--Remember to not choose a custom config\n -Then exit"
     sleep 5
 
     nvim
 
     mv ~/.config/nvim/lua/custom ~/.config/nvim/lua/custom-backup
     git clone https://github.com/Alwaa/nvchad-custom.git ~/.config/nvim/lua/custom
+    
+    printf "\n --In Nvim, run 'MasonInstallAll' and 'NvChadUpdate'\n"
+    sleep 8
     nvim;;
 	no ) echo continuing...;
     break;;
