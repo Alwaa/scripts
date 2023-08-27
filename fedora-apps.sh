@@ -1,7 +1,8 @@
 #!bin/bash
 
 # Update all
-sudo dnf update -y && sudo dnf upgrade -y
+sudo dnf update
+sudo dnf upgrade
 # For dual booting
 sudo dnf install grub-customizer
 
