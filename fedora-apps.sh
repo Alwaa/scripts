@@ -78,6 +78,13 @@ esac
 
 done
 
+# Basic folder structure
+printf "\n --Seting up folders--\n\n"
+mkdir -p "~/ugit"
+mkdir -p "~/wgit"
+
+# Setting up bash aliasse
+# TODO
 
 # Apps
 printf "\n --Installing Apps-- \n\n"
