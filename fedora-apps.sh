@@ -111,11 +111,10 @@ done
 
 source ~/.bashrc
 #alias -p
-sleep 10
+sleep 8
 
 ## Apps ##
 printf "\n --Installing Apps-- \n\n"
-sleep 10
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
 sudo dnf install fedora-workstation-repositories
