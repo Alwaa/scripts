@@ -135,7 +135,7 @@ flatpak install flathub com.discordapp.Discord
 flatpak install flathub com.valvesoftware.Steam
 
 printf "\n --Turn off run in background in app settings for:\n Steam\n\n"
-printf "\n --Maybe steam-devices needed for controller support\n\n"
+printf "\n --Maybe steam-devices needed for controller support\n --Also, tturn on compatibility for all games in Steam settings\n\n"
 sleep 10
 
 
