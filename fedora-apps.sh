@@ -133,10 +133,10 @@ flatpak install flathub org.kde.krita
 flatpak install flathub org.audacityteam.Audacity
 flatpak install flathub com.discordapp.Discord
 flatpak install flathub com.valvesoftware.Steam
+sudo dnf install steam-devices
 
 printf "\n --Turn off run in background in app settings for:\n Steam\n\n"
-printf "\n --Maybe steam-devices needed for controller support\n\n"
-sleep 10
+sleep 3
 
 
 flatpak install flathub md.obsidian.Obsidian
