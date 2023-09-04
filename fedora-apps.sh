@@ -122,16 +122,19 @@ sleep 8
 printf "\n --Installing Apps-- \n\n"
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
+printf "\n -Chrome- \n\n"; sleep 1
 sudo dnf install fedora-workstation-repositories
 sudo dnf config-manager --set-enabled google-chrome
 sudo dnf install google-chrome-stable
 
 #Windows compatibility layer
+printf "\n -WINE- \n\n"; sleep 1
 # FOR FEDORA 38
 sudo dnf config-manager --add-repo https://dl.winehq.org/wine-builds/fedora/38/winehq.repo
 sudo sudo dnf install winehq-stable
 
 
+printf "\n -Flatpaks++- \n\n"; sleep 1
 flatpak install flathub org.gnome.Reversi # Why not
 flatpak install flathub org.kde.krita
 flatpak install flathub org.audacityteam.Audacity
@@ -149,10 +152,10 @@ flatpak install flathub md.obsidian.Obsidian
 mkdir -p ~/Documents/obsidian/
 
 printf "\n --Setup Minimal Theme \n Fetch git repositories in '~/Documents/obsidian/ (alias gobs)'\n\n"
-sleep 5
+sleep 3
 
 printf "\n --If needed, Install Nvidia drivers through: \n https://rpmfusion.org/Howto/NVIDIA\n\n"
 
-sleep 10
+sleep 8
 neofetch
 sleep 2
