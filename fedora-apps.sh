@@ -7,15 +7,17 @@ sudo dnf upgrade
 sudo dnf install grub-customizer
 
 # General
-sudo dnf install htop corectrl neofetch
+sudo dnf install htop neofetch
 sudo dnf install gh neovim
+
 #rpmfusion
 sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 sudo dnf groupupdate core
 
 # Rust and Python
 printf "\n --Installing Programming Languages-- \n\n"; sleep 3
-sudo dnf install rust cargo 
+# sudo dnf install rust cargo #Does not include rustup, which makes it more finiky 
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 sudo dnf install nodejs 
 sudo dnf install python3-pip 
 
@@ -136,7 +138,9 @@ flatpak install flathub com.valvesoftware.Steam
 sudo dnf install steam-devices
 
 printf "\n --Turn off run in background in app settings for:\n Steam\n\n"
-sleep 3
+sleep 1
+printf "\n --Turn on compatibility for all games in Steam settings\n\n"
+sleep 4
 
 
 flatpak install flathub md.obsidian.Obsidian
