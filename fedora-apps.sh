@@ -1,8 +1,10 @@
 #!bin/bash
 
 # Update all
+printf "\n --UPDATING ALL-- \n\n"; sleep 3
 sudo dnf update
 sudo dnf upgrade
+printf "\n ---------------- \n\n"; sleep 1 
 # For dual booting
 sudo dnf install grub-customizer
 
